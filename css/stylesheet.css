@@ -27,10 +27,10 @@ a{
   color:inherit; 
   /* 색상 상속을 받음 */
 }
-
+/* 
 a:visited{
   color:#666;
-}
+} 방문한 링크 회색으로*/
 
 /* a:hover, a:focus{
     color:#fff
@@ -939,17 +939,80 @@ body{
 
 
 /* 슬로건 */
-.slogan{
-  background-color : aqua;
-  height:10vh;
-  padding:15px 0;
+.slogan {
+  position: relative;
+  padding: 0 100px 10px 150px;
+}
+.slogan-heading{
+  width: 110px;
+  height: 83px;
+  line-height: 83px;
+  text-align: center;
+  position: absolute;
+  left: 15px;
+  bottom: -25px;
+}
+.slogan-heading::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("images/coffee.png") no-repeat;
+}
+.slogan-content{
+  color: #a09784;
+}
+
+
+.slogan-content q::before{
+  font-size: 3.5rem;
+  position: relative;
+  top: 10px;
+}
+.slogan-content q::after{
+  content: '';
+}
+
+
+/* 푸터 */
+.footer-bg{
+  background: #ccc linear-gradient(#ccc 0%, #eee 30%, #fff 50%, #fff 100%)
+}
+.footer{ 
+  padding:15px 100px 15px 150px;
+  position: relative;
+}
+
+/* 푸터로고 */
+.footer-logo{
+  position: absolute;
+  top:65px;
+  left:15px;
 
 }
-.footer-bg{
-  background-color : purple;
+
+/* 가이드링크목록 */
+.guide-list{
+  background: #7b8385;
+  color:#fff;
+  display: flex;
+  justify-content: space-between;
+  padding:5px 50px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
-.footer{
-  background-color : yellow;
-  height:10vh;  
-  padding:15px 0;
+
+/* 주소 및 연락처 정보 */
+.address, .copyright{
+  display: block;
+  margin: 5px 0;
+}
+/* 뱃지 */
+.badge{
+  position: absolute;
+  top:15px;
+  right : 0;
 }
